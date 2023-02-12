@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte-familia-staat: 'Staatliches', sans-serif;
+    --fonte-familia-pala: 'Palanquin', sans-serif;
+
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #EFF1FF;
+}
+
+.page {
+    max-width: 38.4rem;
+    text-align: center;
+}
+
+header {
+    background-color: #8E9AAF;
+    height: 27.9rem;
+}
+
+header img {
+    margin: 3.2rem auto;
+}
+
+header h1 {
+    font-family: var(--fonte-familia-staat);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+
+
+    background-color: #CBC0D3;
+    height: 4.9rem;
+    color: #FFFFFF;
+
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    margin: 1.4rem 3.2rem 6rem;
+}
+
+.cards {
+    display: grid;
+    gap: 3.6rem;
+}
+
+main p {
+    font-family: var(--fonte-familia-pala);
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5rem;
+
+    color: #23053A;
+
+    max-width: 30.5rem;
+    padding: 0;
+    margin-bottom: 6.3rem;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card {
+    position: relative;
+    font-family: var(--fonte-familia-staat);
+    border-radius: 2rem;
+
+    animation: baixoParaCima 2s;
+}
+
+.card h2 {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    background-color: #FEEAFA;
+    border-radius: 2rem;
+
+    font-family: var(--fonte-familia-staat);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+
+    padding: 0 2.3rem;
+
+    color: #4A4E69;
+
+    animation: cimaParaBaixo 1s 500ms backwards;
+}
+
+@keyframes baixoParaCima {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cimaParaBaixo {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
